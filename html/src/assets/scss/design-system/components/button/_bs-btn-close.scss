@@ -1,8 +1,0 @@
-.btn-close {
-    @include border-radius($border-radius-sm);
-}
-.btn {
-    &:focus {
-        box-shadow: none;
-    }
-}
