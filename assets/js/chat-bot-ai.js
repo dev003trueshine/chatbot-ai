@@ -17,7 +17,18 @@ Index Of Script
   "use strict";
   // aos animation
   AOS.init({
-    once: true // ensures animation happens only once per element
+    offset: 100,       // trigger earlier
+    duration: 1000,    // animation duration
+    easing: 'ease-in-out',
+    once: false,       // allow animation every time you scroll
+    startEvent: 'DOMContentLoaded'
+  });
+
+  // Fix for nav hash jump (#faq, #contact)
+  window.addEventListener("hashchange", () => {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 300);
   });
 
   /*----------------Back To Top--------------------*/
