@@ -1,0 +1,22 @@
+<div class="p-4 rounded position-relative review-card">
+    <div class="quotes-icon">
+        <i class="ph-fill ph-quotes"></i>
+    </div>
+    <div class="rating-list d-flex align-items-center">
+        <i class="ph-fill ph-star text-warning"></i>
+        <i class="ph-fill ph-star text-warning"></i>
+        <i class="ph-fill ph-star text-warning"></i>
+        <i class="ph-fill ph-star text-warning"></i>
+        <i class="ph-fill ph-star text-warning"></i>
+    </div>
+    <div class="d-flex align-items-center gap-3 flex-md-nowrap flex-wrap my-4">
+        <a class="m-0 user border-0 avatar-50 text-center">
+            <span>{{user-image}}</span>
+        </a>
+        {{!-- <img src="{{path}}assets/images/{{image}}" alt="marvel Customer" class="rounded-circle" width="50" height="50"> --}}
+        <div class="d-flex flex-column">
+            <h6 class="mb-0">{{customerName}}</h6>
+        </div>
+    </div>
+    <p class="m-0">{{reviewText}}</p>
+</div>

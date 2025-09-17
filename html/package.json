@@ -1,0 +1,55 @@
+{
+  "name": "maravel-creation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [
+    "Pro",
+    "Open Source",
+    "Photography",
+    "Clean",
+    "maravel-creation",
+    "Design System",
+    "Gulp",
+    "Scss",
+    "HTML5",
+    "CSS3",
+    "Javascript",
+    "creatiixDesign"
+  ],
+  "scripts": {
+    "watch": "gulp watch --dev=true --output=dist-temp",
+    "dev": "gulp build --mini=false",
+    "build": "gulp build --dev=false"
+  },
+  "author": "creatiixDesign",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "cross-env": "^7.0.3",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-npm-dist": "^1.0.4",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-wait": "^0.0.2",
+    "handlebars": "^4.7.8",
+    "handlebars-layouts": "^3.1.4",
+    "minimist": "^1.2.8",
+    "sass": "^1.89.2",
+    "yargs": "^17.7.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "counterup2": "^2.0.2",
+    "jquery": "^3.7.1"
+  }
+}

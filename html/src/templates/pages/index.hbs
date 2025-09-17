@@ -1,0 +1,183 @@
+{{#extend layout title="Home" active="index" isHeader="true" isFooter="true" isSlickSlider="true" isvideo="true"
+path="./"}}
+{{#content "content"}}
+{{!-- banner start --}}
+{{> components/widgets/banner }}
+{{!-- Specialties gallery --}}
+{{!-- <div class="section-padding">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">Our
+                Specialties</span>
+            <h5 class="mt-2 title">From intimate portraits to grand celebrations,</br> we capture life's most meaningful
+                moments.</h5>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="specialty-item position-relative">
+                    <img src="{{path}}assets/images/banner.webp" alt="Specialty 1" class="img-fluid specialty-img">
+                    <div class="position-absolute bottom-0 p-3 info">
+                        <h5 class="text-white">Wedding</h5>
+                        <p class="m-0 font-size-14 text-white">Timeless moments of love and celebration.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="specialty-item position-relative">
+                    <img src="{{path}}assets/images/banner.webp" alt="Specialty 1" class="img-fluid specialty-img">
+                    <div class="position-absolute bottom-0 p-3 info">
+                        <h5 class="text-white">Portrait</h5>
+                        <p class="m-0 font-size-14 text-white">Professional portraits that capture personality</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="specialty-item position-relative">
+                    <img src="{{path}}assets/images/banner.webp" alt="Specialty 1" class="img-fluid specialty-img">
+                    <div class="position-absolute bottom-0 p-3 info">
+                        <h5 class="text-white">Fashion</h5>
+                        <p class="m-0 font-size-14 text-white">Editorial and commercial fashion photography</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="specialty-item position-relative">
+                    <img src="{{path}}assets/images/banner.webp" alt="Specialty 1" class="img-fluid specialty-img">
+                    <div class="position-absolute bottom-0 p-3 info">
+                        <h5 class="text-white">Nature</h5>
+                        <p class="m-0 font-size-14 text-white">Breathtaking landscapes and natural beauty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
+{{!-- Portfolio gallery --}}
+<div class="section-padding">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">Featured
+                Memories</span>
+            <h5 class="mt-2 title">Experience our style and vision through the live Portfolio gallery below.</h5>
+        </div>
+        <div class="text-center container mx-auto">
+            <div class="slick-slider slick-container portfolio-container">
+                <div class="slick-slide">
+                    {{> components/widgets/portfolio-card portfolio-img="portfolio1.jpg"
+                    portfolio-title="capture"}}
+                </div>
+                <div class="slick-slide">
+                    {{> components/widgets/portfolio-card portfolio-img="portfolio2.jpg"
+                    portfolio-title="Customization"}}
+                </div>
+                <div class="slick-slide">
+                    {{> components/widgets/portfolio-card portfolio-img="portfolio3.jpg"
+                    portfolio-title="Nature"}}
+                </div>
+                <div class="slick-slide">
+                    {{> components/widgets/portfolio-card portfolio-img="portfolio4.jpg"
+                    portfolio-title="Pre wedding"}}
+                </div>
+                <div class="slick-slide">
+                    {{> components/widgets/portfolio-card portfolio-img="portfolio5.jpg"
+                    portfolio-title="Candid"}}
+                </div>
+                <div class="slick-slide">
+                    {{> components/widgets/portfolio-card portfolio-img="portfolio6.jpg"
+                    portfolio-title="Haldi"}}
+                </div>
+            </div>
+            <div class="slick-pagination d-md-none d-block"></div>
+        </div>
+    </div>
+</div>
+{{!-- why marvel --}}
+<div class="section-padding-bottom">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">Signature
+                Portfolio</span>
+            <h4 class="mt-2 title">A glimpse of creativity captured through our lens, straight from our Portfolio.</h4>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-10">
+                <div class="films-trailer-container d-inline-block rounded-3 overflow-hidden">
+                    <div class="films-trailer position-relative rounded-3 overflow-hidden">
+                        <img src="{{path}}assets/images/media/banner.jpg" class="trailer-image" alt="trailer-image">
+                        <a data-fslightbox="html5-video"
+                            href="https://youtu.be/EIbu9qQw7TM?list=TLGGk3s4ZJ6_A-AwOTA5MjAyNQ"
+                            class="video-open playbtn text-decoration-none" tabindex="0">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="80px"
+                                viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+                                <polygon class="triangle" fill="none" stroke-width="7" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-miterlimit="10"
+                                    points="73.5,62.5 148.5,105.8 73.5,149.1 ">
+                                </polygon>
+                                <circle class="circle" fill="none" stroke-width="7" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3">
+                                </circle>
+                            </svg>
+                            <span class="w-trailor text-uppercase"> Watch Trailer </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- start review section --}}
+<section class="mb-lg-0 mb-2">
+    <div class="container">
+        <div class="row gy-3 align-items-center mb-5">
+            <div class="col-md-8">
+                <div class="section-title mb-0">
+                    <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">
+                        What Our Customers Say
+                    </span>
+                    <h5 class="title mt-2">
+                        “Tailored photography & film packages designed to capture your story with elegance and
+                        creativity.”
+                    </h5>
+                </div>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a href="https://www.google.com/search?sca_esv=c720b8cb6c2b7949&sxsrf=AE3TifN0HqdJ1zhFEPKupr_2GPGJgFInLw:1757521209428&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E9BzvFMkfUesIWQMU1yX44xFj_h0WK-zurm3N6O1B1DSPfig-GaBB_2rNgIwxcDK9zZ2trf66I7M2iLuy-02HFl8F6QJ&q=Marvel+Creation+Reviews&sa=X&ved=2ahUKEwj89f3azM6PAxVEiK8BHXpaAXoQ0bkNegQIJhAE&biw=1536&bih=695&dpr=1.25"
+                    target="_blank" class="btn btn-secondary">View All</a>
+            </div>
+        </div>
+        <div class="slick-slider slick-reviews">
+            <div class="slick-item my-3">
+                {{> components/widgets/review-card reviewText="Marvel Creation truly made my special moments
+                unforgettable 💕. The way they captured every detail in HD is just magical ✨. From start to finish,
+                their team was humble, professional, and so easy to work with 🙏😊. I’m really grateful for the effort
+                and creativity they put into every shot 📷🌸. Thank you for giving me memories that will last forever
+                🌈💖." customerName="Rishu Patel" user-image="R" }}
+            </div>
+            <div class="slick-item my-3">
+                {{> components/widgets/review-card reviewText="Real and natural photography with very affordable rate.
+                and really amazing work" customerName="Gira Patel" user-image="G" }}
+            </div>
+            <div class="slick-item my-3">
+                {{> components/widgets/review-card reviewText="Click your best memories with marvel creation." customerName="Niral Patel" user-image="N" }}
+            </div>
+            <div class="slick-item my-3">
+                {{> components/widgets/review-card reviewText="There is one thing the photograph must contain, the humanity 🙃 of the moment... Taking an image, freezing a moment, reveals how rich reality truly is.... Photography takes an instant out of time by holding it still... Great work Parth...Nice clicks really like Marvellous clicks👌🙂🤗😘n continue this work with your full enthusiasm...." customerName="Kavita patel" user-image="K" }}
+            </div>
+            <div class="slick-item my-3">
+                {{> components/widgets/review-card reviewText="Excellent photography.. He capture moments and memories, not only pictures.. Extremely satisfied with his work.. Parth and his team are really the best.. 😊" customerName="
+Ashvini Patel" user-image="A" }}
+            </div>
+            <div class="slick-item my-3">
+                {{> components/widgets/review-card reviewText="Great photography.I would like to thank you for doing such a great job for us!" customerName="Ankit Patel" user-image="A" }}
+            </div>
+            <div class="slick-item my-3">
+                {{> components/widgets/review-card reviewText="Amazing photography, best click sence, keep it up bro.... 👍👌" customerName="Drashti Patel" user-image="D" }}
+            </div>
+        </div>
+</section>
+{{!-- start review section --}}
+{{!-- Book Now --}}
+{{> components/widgets/book-now }}
+{{/content}}
+{{/extend}}

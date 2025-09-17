@@ -1,0 +1,41 @@
+{{#compare isImageFirst '==' "true"}}
+<div class="d-flex align-items-center justify-content-between how-work-card flex-md-nowrap flex-wrap">
+    <div class="flex-grow-1">
+        <div class="d-flex align-items-center gap-3 mb-3">
+            <h2 class="step-number fw-bold big-title">{{step_number}}</h2>
+            <div class="how-work-icon icon-bg avatar-48 icon-bg">
+                <i class="ph {{icon_class}}"></i>
+            </div>
+        </div>
+        <h3 class="fw-bold font-size-30">{{work_title}}</h3>
+        <p class="mb-0">{{work_description}}</p>
+    </div>
+    <div class="flex-grow-1">
+        <div class="position-relative px-lg-5 px-0">
+            <img src="{{path}}assets/images/{{img_name}}" class="w-100 how-work-img shadow" alt="work aiimg">
+            <div class="position-absolute object-bottom rounded-circle avatar-24 animate-bg animate-bounce"></div>
+            <div class="position-absolute object-top rounded-circle avatar-30 secondary-icon-bg animate-pulse"></div>
+        </div>
+    </div>
+</div>
+{{else}}
+<div class="d-flex align-items-center justify-content-between how-work-card flex-md-row flex-column-reverse">
+    <div class="flex-grow-1">
+        <div class="position-relative px-lg-5 px-0">
+            <img src="{{path}}assets/images/{{img_name}}" class="w-100 how-work-img shadow" alt="work ai img">            
+            <div class="position-absolute object-bottom rounded-circle avatar-24 animate-bg animate-bounce"></div>
+            <div class="position-absolute object-top rounded-circle avatar-30 secondary-icon-bg animate-pulse"></div>
+        </div>
+    </div>
+    <div class="flex-grow-1">
+        <div class="d-flex align-items-center gap-3 mb-3">
+            <h2 class="step-number fw-bold big-title">{{step_number}}</h2>
+            <div class="how-work-icon icon-bg avatar-48 {{bg_class}}">
+                <i class="ph {{icon_class}}"></i>
+            </div>
+        </div>
+        <h3 class="fw-bold font-size-30">{{work_title}}</h3>
+        <p class="mb-0">{{work_description}}</p>
+    </div>
+</div>
+{{/compare}}

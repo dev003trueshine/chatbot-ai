@@ -1,0 +1,67 @@
+{{#extend 'layouts/default' title="photography" isHeader="true" active="photography" path="./" }}
+{{#content "content"}}
+<div class="section-padding-top">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">Signature
+                Portfolio</span>
+            <h5 class="mt-2 title">A showcase of artistry and passion — where every frame reflects emotions, elegance,
+                and the beauty of your special moments.</h5>
+        </div>
+        <ul class="nav nav-pills portfolio-tab d-flex align-items-center justify-content-center column-gap-3 row-gap-2 flex-wrap"
+            role="tablist">
+            <li class="nav-item">
+                <a class="nav-link py-2 px-3 active" data-bs-toggle="pill" href="#all">All</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-2 px-3" data-bs-toggle="pill" href="#marriage">Marriage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-2 px-3" data-bs-toggle="pill" href="#engagement">Engagement</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content mt-5">
+            <div id="all" class="container tab-pane active">
+                <div class="masonry__container">
+
+                    {{> components/widgets/photography-card photography-img="img-1.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-2.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-3.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-4.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-5.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-6.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-7.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-8.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-9.jpeg"}}
+                    
+                </div>
+            </div>
+            <div id="marriage" class="container tab-pane fade">
+                <div class="masonry__container">
+                    {{> components/widgets/photography-card photography-img="img-1.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-3.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-5.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-7.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-9.jpeg"}}
+                </div>
+            </div>
+                 <div id="engagement" class="container tab-pane fade">
+                <div class="masonry__container">
+                    {{> components/widgets/photography-card photography-img="img-1.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-3.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-5.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-7.jpeg"}}
+                    {{> components/widgets/photography-card photography-img="img-9.jpeg"}}
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary d-block mx-auto mt-5" onclick="window.location.reload();">Load More</button>
+    </div>
+</div>
+
+{{!-- Book Now --}}
+{{> components/widgets/book-now }}
+{{/content}}
+{{/extend}}

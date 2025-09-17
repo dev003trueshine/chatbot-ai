@@ -1,0 +1,142 @@
+.films-trailer-container {
+  padding: 0.625rem;
+  background: var(--bs-gray-900);
+  -webkit-backdrop-filter: blur(0.625rem);
+  backdrop-filter: blur(0.063rem);
+  border: 0.063rem solid var(--bs-border-color);
+
+  .films-trailer {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(20, 20, 20, 0.9) 15%,
+          rgba(83, 100, 141, 0) 100%);
+      opacity: 0.5;
+    }
+  }
+
+  .trailer-image {
+    width: 100%;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+  }
+
+  .playbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+  }
+}
+
+.films-card {
+  iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+.films-detail-page {
+  .films-data {
+    max-height: 22.5rem;
+    overflow-y: auto;
+
+    .films-data-card {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1rem;
+
+      .films-data-card-image {
+        flex-shrink: 0;
+        position: relative;
+
+        img {
+          height: 4rem;
+          object-fit: cover;
+          border-radius: var(--bs-border-radius-lg);
+        }
+      }
+
+      .films-data-card-content {
+        flex-grow: 1;
+        width: 100%;
+
+        .line-count-2 {
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical
+        }
+      }
+
+      .films-category {
+        li {
+          position: relative;
+          font-size: .75rem;
+
+          &:not(:last-child) {
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: -0.7rem;
+              width: 0.25rem;
+              height: 0.25rem;
+              background-color: var(--bs-body-color);
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      &.active,
+      &:hover {
+        background-color: var(--bs-body-bg);
+
+        .films-data-title {
+          color: var(--bs-primary);
+        }
+      }
+
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .films-trailer-container {
+
+    .playbtn {
+      svg {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+      .w-trailor {
+        font-size: 1.5rrem;
+      }
+    }
+
+    .trailer-image {
+      aspect-ratio: 3/2.8;
+    }
+  }
+
+  .films-detail-page {
+    .films-data {
+
+      .films-data-card {
+        gap: .8rem;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
