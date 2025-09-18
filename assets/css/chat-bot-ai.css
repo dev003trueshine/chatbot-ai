@@ -15757,6 +15757,11 @@ footer {
 footer .footer-inner-content {
   padding: 64px 0;
 }
+footer .footer-inner-content .footer-logo {
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 footer .footer-inner-content .footer-desc {
   color: var(--bs-gray-300);
   line-height: 1.625;

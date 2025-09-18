@@ -17,12 +17,15 @@ Index Of Script
   "use strict";
   // aos animation
   AOS.init({
-    offset: 100, // trigger earlier
-    duration: 1000, // animation duration
-    easing: 'ease-in-out',
-    once: false, // allow animation every time you scroll
-    startEvent: 'DOMContentLoaded'
+    duration: 800, // animation duration
+    once: true, // whether animation should happen only once
+    mirror: false, // disable repeating on scroll back
   });
+
+  window.addEventListener('resize', () => {
+    AOS.refresh(); // refresh positions after resize
+  });
+
 
   // Fix for nav hash jump (#faq, #contact)
   window.addEventListener("hashchange", () => {
@@ -92,24 +95,24 @@ Index Of Script
   });
 
   // Scrollspy for navbar active state
-window.addEventListener('scroll', function () {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-  let scrollPos = window.scrollY || window.pageYOffset;
+  window.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    let scrollPos = window.scrollY || window.pageYOffset;
 
-  sections.forEach(function (section) {
-    const sectionTop = section.offsetTop - 80; // adjust offset for sticky header
-    const sectionHeight = section.offsetHeight;
-    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-      navLinks.forEach(function (link) {
-        link.classList.remove('active');
-        if (link.getAttribute('href').replace('#', '') === section.id) {
-          link.classList.add('active');
-        }
-      });
-    }
+    sections.forEach(function (section) {
+      const sectionTop = section.offsetTop - 80; // adjust offset for sticky header
+      const sectionHeight = section.offsetHeight;
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        navLinks.forEach(function (link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href').replace('#', '') === section.id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
   });
-});
 
   /*--------------------------------------
     Slick Slider
@@ -123,7 +126,7 @@ $(function () {
     slidesToScroll: 1,
     autoplay: true,
     loop: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 500,
     dots: true,
     arrows: false,
 
