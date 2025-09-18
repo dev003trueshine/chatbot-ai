@@ -17,10 +17,10 @@ Index Of Script
   "use strict";
   // aos animation
   AOS.init({
-    offset: 100,       // trigger earlier
-    duration: 1000,    // animation duration
+    offset: 100, // trigger earlier
+    duration: 1000, // animation duration
     easing: 'ease-in-out',
-    once: false,       // allow animation every time you scroll
+    once: false, // allow animation every time you scroll
     startEvent: 'DOMContentLoaded'
   });
 
@@ -29,6 +29,25 @@ Index Of Script
     setTimeout(() => {
       AOS.refresh();
     }, 300);
+  });
+
+  // herader sticky
+  $(document).ready(function () {
+    const $header = $('header');
+
+    if ($header.length > 0) {
+      const stickyOffset = $header.offset().top;
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > stickyOffset) {
+          $header.addClass('sticky');
+        } else {
+          $header.removeClass('sticky');
+        }
+      });
+    } else {
+      console.error("Header element not found");
+    }
   });
 
   /*----------------Back To Top--------------------*/
@@ -63,11 +82,31 @@ Index Of Script
     }
   });
 
-  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
-  link.addEventListener('click', function() {
-    let navbarCollapse = document.querySelector('#navbarNavDropdown');
-    if (navbarCollapse.classList.contains('show')) {
-      new bootstrap.Collapse(navbarCollapse).hide();
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      let navbarCollapse = document.querySelector('#navbarNavDropdown');
+      if (navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).hide();
+      }
+    });
+  });
+
+  // Scrollspy for navbar active state
+window.addEventListener('scroll', function () {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  let scrollPos = window.scrollY || window.pageYOffset;
+
+  sections.forEach(function (section) {
+    const sectionTop = section.offsetTop - 80; // adjust offset for sticky header
+    const sectionHeight = section.offsetHeight;
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+      navLinks.forEach(function (link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href').replace('#', '') === section.id) {
+          link.classList.add('active');
+        }
+      });
     }
   });
 });
